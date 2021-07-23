@@ -27,7 +27,7 @@ class Person(User):
     DoesNotExist = None
     is_customer = models.BooleanField(default=False)
     is_supplier = models.BooleanField(default=False)
-    Tel = PhoneNumberField(null=True, blank=True, unique=True)
+    Tel = PhoneNumberField('phone number', null=True, blank=True, unique=True)
 
     default_shipping_address = models.ForeignKey("Address", null=True, blank=True, default=None,
                                                  verbose_name="Default shipping address",
